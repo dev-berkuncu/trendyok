@@ -36,7 +36,7 @@ export default function ComparisonSection() {
               ))}
             </ul>
           </div>
-          <div className="animate-on-scroll from-right bg-[#162040] p-1 rounded-2xl shadow-2xl shadow-blue-500/10 relative overflow-hidden border-2 border-emerald-accent/40">
+          <div className="animate-on-scroll from-right shimmer-border bg-[#162040] p-1 rounded-2xl shadow-2xl shadow-blue-500/10 relative overflow-hidden border-2 border-emerald-accent/40">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent pointer-events-none" />
             <div className="bg-[#162040] p-10 rounded-xl h-full relative z-10">
               <div className="flex justify-between items-start mb-8">

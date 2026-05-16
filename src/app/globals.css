@@ -166,3 +166,32 @@
 ::-webkit-scrollbar-thumb:hover { background: #334155; }
 
 html { scroll-behavior: smooth; }
+
+/* ─── Shimmer Border ─── */
+@keyframes shimmer-border {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.shimmer-border {
+  position: relative;
+}
+.shimmer-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(37, 99, 235, 0.1) 25%,
+    rgba(37, 99, 235, 0.6) 50%,
+    rgba(37, 99, 235, 0.1) 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-border 3s ease-in-out infinite;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
