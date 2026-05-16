@@ -14,18 +14,18 @@ export default function HeroSection() {
     <section className="relative min-h-[90vh] flex items-center pt-20 pb-section-padding px-margin-mobile md:px-margin-desktop hero-gradient overflow-hidden">
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 items-center gap-gutter relative z-10">
         <div className="lg:col-span-6">
-          <span className="animate-on-scroll inline-flex items-center gap-2 bg-blue-500/10 text-emerald-accent font-body text-xs font-bold tracking-wide px-4 py-2 rounded-full mb-6 border border-blue-500/20">
-            <span className="w-2 h-2 rounded-full bg-emerald-accent animate-pulse" />
+          <span className="animate-on-scroll inline-flex items-center gap-2 bg-[#B8C7A3]/15 text-[#8FA87A] font-body text-xs font-bold tracking-wide px-4 py-2 rounded-full mb-6 border border-[#B8C7A3]/25">
+            <span className="w-2 h-2 rounded-full bg-[#8FA87A] animate-pulse" />
             Türkiye&apos;nin #1 E-Ticaret Analitik Platformu
           </span>
 
-          <h1 className="animate-on-scroll stagger-1 font-display text-[56px] font-bold leading-[64px] tracking-[-0.02em] text-white mb-8 max-[768px]:text-[32px] max-[768px]:leading-[40px]">
+          <h1 className="animate-on-scroll stagger-1 font-display text-[56px] font-bold leading-[64px] tracking-[-0.02em] text-[#2D2A26] mb-8 max-[768px]:text-[32px] max-[768px]:leading-[40px]">
             E-Ticaret&nbsp;<br />
             <span className="text-gradient-blue">Kârlılığını</span><br />
             Artırın
           </h1>
 
-          <p className="animate-on-scroll stagger-2 font-body text-lg leading-[28px] text-gray-400 max-w-lg mb-10">
+          <p className="animate-on-scroll stagger-2 font-body text-lg leading-[28px] text-[#6B6560] max-w-lg mb-10">
             Satışlarınızı analiz edin, maliyetlerinizi optimize edin ve kârlılığınızı artırın. 10.000+ e-ticaret işletmesinin güvendiği platform.
           </p>
 
@@ -35,10 +35,10 @@ export default function HeroSection() {
           </div>
 
           <div className="animate-on-scroll stagger-4 mt-16">
-            <p className="font-body text-xs font-bold tracking-wide text-gray-600 mb-5">10.000+ İŞLETMENİN TERCİHİ</p>
+            <p className="font-body text-xs font-bold tracking-wide text-[#8C857E] mb-5">10.000+ İŞLETMENİN TERCİHİ</p>
             <div className="flex flex-wrap items-center gap-x-10 gap-y-6 opacity-30 grayscale hover:grayscale-0 hover:opacity-60 transition-all duration-500">
               {partnerLogos.map((logo) => (
-                <img key={logo.name} alt={logo.name} src={logo.src} width={120} height={24} className={`${logo.height} w-auto object-contain brightness-0 invert`} />
+                <img key={logo.name} alt={logo.name} src={logo.src} width={120} height={24} className={`${logo.height} w-auto object-contain brightness-0 opacity-40`} />
               ))}
             </div>
           </div>
@@ -48,8 +48,8 @@ export default function HeroSection() {
           <div className="animate-on-scroll scale-up stagger-2 glass-panel p-6 rounded-2xl transform lg:rotate-1 hover:rotate-0 transition-transform duration-700">
             <LiveChart />
           </div>
-          <div className="absolute -z-10 -bottom-20 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-[120px]" />
-          <div className="absolute -z-10 -top-20 -left-20 w-60 h-60 bg-cyan-500/10 rounded-full blur-[100px]" />
+          <div className="absolute -z-10 -bottom-20 -right-20 w-80 h-80 bg-[#B8C7A3]/15 rounded-full blur-[120px]" />
+          <div className="absolute -z-10 -top-20 -left-20 w-60 h-60 bg-[#F7C8D0]/20 rounded-full blur-[100px]" />
         </div>
       </div>
     </section>

@@ -78,16 +78,16 @@ export default function LiveChart() {
       {/* Header */}
       <div className="flex items-center justify-between mb-4 px-1">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
-            <span className="material-symbols-outlined text-emerald-accent text-lg">
+          <div className="w-8 h-8 rounded-lg bg-[#B8C7A3]/20 flex items-center justify-center">
+            <span className="material-symbols-outlined text-[#8FA87A] text-lg">
               trending_up
             </span>
           </div>
           <div>
-            <div className="font-body text-xs text-gray-500 tracking-wide">
+            <div className="font-body text-xs text-[#8C857E] tracking-wide">
               CANLI GELİR ANALİZİ
             </div>
-            <div className="font-display text-lg font-semibold text-white">
+            <div className="font-display text-lg font-semibold text-[#2D2A26]">
               ₺{(current * 280 + 14000).toLocaleString("tr-TR")}
             </div>
           </div>
@@ -95,8 +95,8 @@ export default function LiveChart() {
         <div
           className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold font-body ${
             isUp
-              ? "bg-emerald-500/10 text-emerald-400"
-              : "bg-red-500/10 text-red-400"
+              ? "bg-[#B8C7A3]/15 text-[#8FA87A]"
+              : "bg-[#F7C8D0]/20 text-[#D4544A]"
           }`}
         >
           <span className="material-symbols-outlined text-sm">
@@ -114,13 +114,13 @@ export default function LiveChart() {
       >
         <defs>
           <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#2563EB" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#2563EB" stopOpacity="0" />
+            <stop offset="0%" stopColor="#8FA87A" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="#8FA87A" stopOpacity="0" />
           </linearGradient>
           <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#60A5FA" stopOpacity="0.2" />
-            <stop offset="50%" stopColor="#2563EB" />
-            <stop offset="100%" stopColor="#60A5FA" />
+            <stop offset="0%" stopColor="#B8C7A3" stopOpacity="0.2" />
+            <stop offset="50%" stopColor="#8FA87A" />
+            <stop offset="100%" stopColor="#B8C7A3" />
           </linearGradient>
           <filter id="glow">
             <feGaussianBlur stdDeviation="3" result="blur" />
@@ -143,13 +143,13 @@ export default function LiveChart() {
                 y1={y}
                 x2={WIDTH}
                 y2={y}
-                stroke="rgba(148,163,184,0.07)"
+                stroke="rgba(180,170,155,0.15)"
                 strokeDasharray="4 4"
               />
               <text
                 x={WIDTH - 4}
                 y={y - 4}
-                fill="rgba(148,163,184,0.25)"
+                fill="rgba(140,133,126,0.35)"
                 fontSize="9"
                 textAnchor="end"
                 fontFamily="var(--font-body)"
@@ -180,7 +180,7 @@ export default function LiveChart() {
         />
 
         {/* Pulse dot */}
-        <circle cx={lastX} cy={lastY} r="6" fill="#2563EB" opacity="0.3">
+        <circle cx={lastX} cy={lastY} r="6" fill="#8FA87A" opacity="0.3">
           <animate
             attributeName="r"
             values="6;12;6"
@@ -194,8 +194,8 @@ export default function LiveChart() {
             repeatCount="indefinite"
           />
         </circle>
-        <circle cx={lastX} cy={lastY} r="4" fill="#2563EB" />
-        <circle cx={lastX} cy={lastY} r="2" fill="#fff" />
+        <circle cx={lastX} cy={lastY} r="4" fill="#8FA87A" />
+        <circle cx={lastX} cy={lastY} r="2" fill="#FFF4E6" />
       </svg>
 
       {/* Bottom metrics */}
@@ -207,15 +207,15 @@ export default function LiveChart() {
         ].map((m) => (
           <div
             key={m.label}
-            className="bg-white/[0.03] rounded-lg p-3 border border-white/5"
+            className="bg-[#2D2A26]/[0.03] rounded-lg p-3 border border-[#D4C4B0]/30"
           >
-            <div className="font-body text-[10px] text-gray-500 tracking-wide uppercase">
+            <div className="font-body text-[10px] text-[#8C857E] tracking-wide uppercase">
               {m.label}
             </div>
-            <div className="font-body text-sm font-semibold text-white">
+            <div className="font-body text-sm font-semibold text-[#2D2A26]">
               {m.value}
             </div>
-            <div className="font-body text-[10px] text-emerald-400">
+            <div className="font-body text-[10px] text-[#8FA87A]">
               {m.change}
             </div>
           </div>
