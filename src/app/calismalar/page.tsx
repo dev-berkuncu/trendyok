@@ -1,0 +1,116 @@
+import React from "react";
+import Image from "next/image";
+import type { Metadata } from "next";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import AnimatedPage from "@/components/ui/AnimatedPage";
+
+export const metadata: Metadata = {
+  title: "Çalışmalar | Trendyok",
+  description: "Sektör liderlerinin Trendyok platformu ile karmaşık verileri nasıl eyleme dönüştürülebilir içgörülere çevirdiğini keşfedin.",
+};
+
+const trustMetrics = [
+  { value: "$2.4B+", label: "Yönetilen Varlık Hacmi", color: "text-emerald-accent" },
+  { value: "%300", label: "Ortalama ROI (İlk Yıl)", color: "text-indigo-accent" },
+  { value: "500+", label: "Kurumsal Dağıtım", color: "text-gray-400" },
+];
+
+export default function CalismalarPage() {
+  return (
+    <>
+      <Navbar />
+      <AnimatedPage>
+        <main className="flex-grow pt-20">
+          <section className="py-section-padding px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto text-center">
+            <div className="max-w-3xl mx-auto space-y-8">
+              <span className="animate-on-scroll font-body text-xs font-bold tracking-wide text-emerald-accent uppercase block">Başarı Hikayeleri</span>
+              <h1 className="animate-on-scroll stagger-1 font-display text-[56px] font-bold leading-[64px] tracking-[-0.02em] text-white max-[768px]:text-[32px] max-[768px]:leading-[40px]">Müşterilerimizin Sonuçları</h1>
+              <p className="animate-on-scroll stagger-2 font-body text-lg leading-[28px] text-gray-400">Sektör liderlerinin Trendyok platformu ile karmaşık verileri nasıl eyleme dönüştürülebilir içgörülere çevirdiğini keşfedin.</p>
+            </div>
+          </section>
+
+          <section className="py-section-padding px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+              <div className="animate-on-scroll md:col-span-8 bg-[#162040] border border-white/5 rounded-2xl overflow-hidden group hover:border-white/15 transition-colors duration-300">
+                <div className="h-64 bg-[#0A1020] relative overflow-hidden">
+                  <Image alt="Dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4zdOMHwTh25DWiNKtiIlajhX56djVKNHyqsiS5hVOf6-8F4bgOkatWgtBjO1scX1lSjTnOrv34E_uiIKwEUiSSSYeItGMcyHTkvlFK6DvefXdrTXDlt8CWi3FVSsN7W_c8JplkFbNh4aTMAhfXZTguEA9bd_kmtLzDbMxb4C99huTGQKY2Q4ecbrs1rttb4olG0WN9lw-9vaIJ1CH-f9piaEkF3FLynzXKVyQ0hHw5ULSUtiIwkyJ-iabZ_TgejMYO_0WzGHjofE" fill className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500" unoptimized />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#162040] to-transparent" />
+                </div>
+                <div className="p-8 space-y-6">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <span className="font-body text-xs font-bold tracking-wide text-indigo-accent">Küresel Perakende</span>
+                    <span className="font-body text-xs font-bold tracking-wide text-gray-500 border border-white/10 px-2 py-1 rounded-full">Tedarik Zinciri</span>
+                  </div>
+                  <h2 className="font-display text-[28px] font-semibold leading-[36px] text-white">Maliyetlerde %24 Düşüş ve Operasyonel Çeviklik</h2>
+                  <p className="font-body text-base text-gray-400">Trendyok&apos;un prediktif analitik motoru sayesinde lojistik maliyetlerinde benzeri görülmemiş azalma sağlandı.</p>
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/5">
+                    <div><div className="font-display text-4xl text-white">%24</div><div className="font-body text-xs font-bold tracking-wide text-gray-500">Maliyet Azalması</div></div>
+                    <div><div className="font-display text-4xl text-emerald-accent">+$12M</div><div className="font-body text-xs font-bold tracking-wide text-gray-500">Yıllık Tasarruf</div></div>
+                  </div>
+                </div>
+              </div>
+              <div className="animate-on-scroll stagger-1 md:col-span-4 bg-[#162040] border border-white/5 rounded-2xl p-8 flex flex-col justify-between hover:border-emerald-accent/30 transition-colors duration-300">
+                <div className="space-y-4">
+                  <span className="font-body text-xs font-bold tracking-wide text-emerald-accent">FinTech</span>
+                  <h3 className="font-display text-[32px] font-semibold leading-[40px] text-white">Risk Yönetiminde Paradigma Değişimi</h3>
+                  <p className="font-body text-base text-gray-400">Gerçek zamanlı dolandırıcılık tespiti ile sahte işlem oranlarında rekor düşüş.</p>
+                </div>
+                <div className="mt-8 pt-4 border-t border-white/5">
+                  <div className="font-display text-3xl text-white">%99.8</div>
+                  <div className="font-body text-xs font-bold tracking-wide text-gray-500">Doğruluk Oranı</div>
+                </div>
+              </div>
+              <div className="animate-on-scroll stagger-2 md:col-span-4 bg-[#162040] border border-white/5 rounded-2xl p-8 flex flex-col justify-between hover:border-emerald-accent/30 transition-colors duration-300">
+                <div className="space-y-4">
+                  <span className="font-body text-xs font-bold tracking-wide text-indigo-accent">Sağlık Teknolojileri</span>
+                  <h3 className="font-display text-[32px] font-semibold leading-[40px] text-white">Hasta Veri Akışında Kusursuz Uyum</h3>
+                  <p className="font-body text-base text-gray-400">Milyonlarca sağlık kaydının güvenli analizi ile tedavi protokollerinde %15 iyileşme.</p>
+                </div>
+                <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between">
+                  <div><div className="font-display text-3xl text-white">10M+</div><div className="font-body text-xs font-bold tracking-wide text-gray-500">Veri Noktası</div></div>
+                  <span className="material-symbols-outlined text-emerald-accent text-3xl" style={{ fontVariationSettings: '"FILL" 1' }}>health_and_safety</span>
+                </div>
+              </div>
+              <div className="animate-on-scroll stagger-3 md:col-span-8 bg-[#0A1020] border border-white/5 rounded-2xl p-8 relative overflow-hidden group hover:border-white/15 transition-colors duration-300">
+                <div className="absolute right-0 bottom-0 opacity-5 transform translate-x-1/4 translate-y-1/4 group-hover:scale-110 transition-transform duration-700"><span className="material-symbols-outlined text-[200px]">factory</span></div>
+                <div className="relative z-10 flex flex-col md:flex-row gap-8 items-center h-full">
+                  <div className="flex-1 space-y-4">
+                    <span className="font-body text-xs font-bold tracking-wide text-gray-500 border border-white/10 px-2 py-1 rounded-full inline-block">Endüstriyel Üretim</span>
+                    <h2 className="font-display text-[28px] font-semibold leading-[36px] text-white">Üretim Hatlarında Kestirimci Bakım Devrimi</h2>
+                    <p className="font-body text-base text-gray-400">IoT sensör verilerinin derinlemesine analizi ile planlanmamış duruş sürelerinin sıfırlanması.</p>
+                  </div>
+                  <div className="w-full md:w-1/3 bg-[#162040] rounded-xl p-6 border border-white/5">
+                    <div className="text-center space-y-2">
+                      <div className="font-body text-xs font-bold tracking-wide text-gray-500">Duruş Süresi Azalması</div>
+                      <div className="font-display text-5xl text-emerald-accent">%42</div>
+                      <div className="w-full bg-white/5 h-2 rounded-full mt-4 overflow-hidden"><div className="bg-emerald-accent h-full w-[42%] rounded-full" /></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-section-padding bg-[#060A14] border-t border-white/5">
+            <div className="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop text-center space-y-16">
+              <div className="max-w-2xl mx-auto space-y-4">
+                <h2 className="animate-on-scroll font-display text-5xl font-semibold leading-[56px] text-white max-[768px]:text-[32px]">Rakamlar Kendini Konuşuyor</h2>
+                <p className="animate-on-scroll stagger-1 font-body text-lg leading-[28px] text-gray-400">Platformumuzun müşterilerimize kattığı ölçülebilir değer.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {trustMetrics.map((m, i) => (
+                  <div key={m.value} className={`animate-on-scroll stagger-${i + 1} space-y-2`}>
+                    <div className="font-display text-[64px] font-bold leading-[72px] tracking-[-0.02em] text-white max-[768px]:text-5xl">{m.value}</div>
+                    <div className={`font-body text-base ${m.color}`}>{m.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </main>
+      </AnimatedPage>
+      <Footer />
+    </>
+  );
+}
