@@ -25,20 +25,27 @@ function buildPath(data: number[]): string {
 }
 
 export default function Sparkline({ color = "#2563EB" }: { color?: string }) {
-  const [data, setData] = useState<number[]>(() => {
+  const [data, setData] = useState<number[]>([]);
+
+  useEffect(() => {
     const a = [50];
     for (let i = 1; i < POINTS; i++) a.push(gen(a[i - 1]));
-    return a;
-  });
+    setData(a);
+  }, []);
 
   const tick = useCallback(() => {
-    setData((p) => [...p.slice(1), gen(p[p.length - 1])]);
+    setData((p) => (p.length === 0 ? p : [...p.slice(1), gen(p[p.length - 1])]));
   }, []);
 
   useEffect(() => {
+    if (data.length === 0) return;
     const id = setInterval(tick, 150);
     return () => clearInterval(id);
-  }, [tick]);
+  }, [tick, data.length]);
+
+  if (data.length === 0) {
+    return <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-10" preserveAspectRatio="none" />;
+  }
 
   const path = buildPath(data);
   const areaPath = `${path} L ${W} ${H} L 0 ${H} Z`;
