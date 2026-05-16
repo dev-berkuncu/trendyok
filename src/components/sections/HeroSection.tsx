@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "@/components/ui/Button";
-import Image from "next/image";
+import LiveChart from "@/components/ui/LiveChart";
 
 const partnerLogos = [
   { name: "Shopify", src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBx_SyJa2RDYszhX5h6mdvaFcN9yWlQEVHZno_6PgSQSl9bJ5JBuHOGZhqSTUtol_s3YmJOY3TbzJp3OmsXegdxkBNhAuA4zDcIPt3hKGX3_48A9P7cTTWhLtRWIW-vy7z7js4fJSS5kZB8hlP3LJoizGt7AIwbd5sehns1CxuBhRtqqtth-LOZCmLL3r9SE6syQ-KKy9zMMLxyl9tOd7rwZUAnhm2a6NN3Ao9g4b5e-taA4_se3tfguvdDWA3_nqtOHu6ulYOf664", height: "h-6" },
@@ -45,8 +45,8 @@ export default function HeroSection() {
         </div>
 
         <div className="lg:col-span-6 relative mt-16 lg:mt-0">
-          <div className="animate-on-scroll scale-up stagger-2 glass-panel p-2 rounded-2xl transform lg:rotate-1 hover:rotate-0 transition-transform duration-700">
-            <Image alt="Trendyok Analytics Dashboard" src="/hero-dashboard.png" width={800} height={500} className="rounded-xl w-full" priority />
+          <div className="animate-on-scroll scale-up stagger-2 glass-panel p-6 rounded-2xl transform lg:rotate-1 hover:rotate-0 transition-transform duration-700">
+            <LiveChart />
           </div>
           <div className="absolute -z-10 -bottom-20 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-[120px]" />
           <div className="absolute -z-10 -top-20 -left-20 w-60 h-60 bg-cyan-500/10 rounded-full blur-[100px]" />
