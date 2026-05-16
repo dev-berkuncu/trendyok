@@ -41,26 +41,34 @@ function buildArea(data: number[]): string {
 const gridLines = [20, 40, 60, 80];
 
 export default function LiveChart() {
-  const [data, setData] = useState<number[]>(() => {
+  const [data, setData] = useState<number[]>([]);
+
+  useEffect(() => {
     const arr: number[] = [50];
     for (let i = 1; i < POINTS; i++) arr.push(generateSmooth(arr[i - 1]));
-    return arr;
-  });
+    setData(arr);
+  }, []);
 
   const latestRef = useRef(data);
   latestRef.current = data;
 
   const tick = useCallback(() => {
     setData((prev) => {
+      if (prev.length === 0) return prev;
       const next = [...prev.slice(1), generateSmooth(prev[prev.length - 1])];
       return next;
     });
   }, []);
 
   useEffect(() => {
+    if (data.length === 0) return;
     const id = setInterval(tick, UPDATE_INTERVAL);
     return () => clearInterval(id);
-  }, [tick]);
+  }, [tick, data.length]);
+
+  if (data.length === 0) {
+    return <div className="w-full h-[380px]" />;
+  }
 
   const linePath = buildPath(data);
   const areaPath = buildArea(data);
