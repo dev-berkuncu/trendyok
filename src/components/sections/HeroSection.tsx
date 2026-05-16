@@ -46,7 +46,7 @@ export default function HeroSection() {
 
         <div className="lg:col-span-6 relative mt-16 lg:mt-0">
           <div className="animate-on-scroll scale-up stagger-2 glass-panel p-2 rounded-2xl transform lg:rotate-1 hover:rotate-0 transition-transform duration-700">
-            <Image alt="Dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFGwZ48QMo5IiXtanYpRFfKtU_R9j59pUHSmq7ha3dR4y2s6CxYiacrJqHy5bjn9mMmVVrck7VX25zRusxVTXRc4M-_cXpsngDjq-lJGSLEz91A59Dq-DvI3Z0XMzPmY_P2f6bvpRYSTAopx9CAFkmn3EaF0_XkzFEzkrdfKbfrHd66Zk3B372xziJPdt_dyFE9QXDLFmdWqQ5AWniN1hYySdM_rxakYdWqckyLpmZXt3-439lZb6hlPjTUACBFYe4wkzE4Spxj3Q" width={800} height={500} className="rounded-xl w-full" priority unoptimized />
+            <Image alt="Trendyok Analytics Dashboard" src="/hero-dashboard.png" width={800} height={500} className="rounded-xl w-full" priority />
           </div>
           <div className="absolute -z-10 -bottom-20 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-[120px]" />
           <div className="absolute -z-10 -top-20 -left-20 w-60 h-60 bg-cyan-500/10 rounded-full blur-[100px]" />
